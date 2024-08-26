@@ -1,0 +1,470 @@
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7e4e3; 
+    color: #333;
+    padding-top: 60px;
+}
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 15px; /* Recuo nas laterais */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura total */
+}
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    padding-top: 80px; /* Ajuste o padding-top para compensar a altura da barra de navegação fixa */
+}
+
+.header {
+    position: fixed; /* Fixa a barra no topo */
+    top: 0; 
+    left: 0;
+    width: 100%; /* Largura total da página */
+    background-color: #f68395; /* Cor da barra */
+    z-index: 1000; /* Garante que a barra esteja acima de outros elementos */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    padding: 10px 0; /* Ajusta o espaçamento interno */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 150px;
+    object-fit: cover;
+}
+
+.search-container {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-right: 10px;
+}
+
+.search-container img {
+    width: 25px;
+    cursor: pointer;
+}
+
+
+.contact-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.contact-cart a {
+    position: relative;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#cart-icon {
+    font-size: 24px;
+    color: #333;
+    position: relative;
+}
+
+#cart-count {
+    background-color: #a00019;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px; /* Ajuste vertical */
+    right: -10px; /* Ajuste horizontal */
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Barra de navegação */
+nav {
+    position: fixed; /* Fixa a barra de navegação */
+    top: 0; /* Fixa no topo */
+    left: 0;
+    width: 100%; /* Largura total da página */
+    background-color: #f8b6d2; /* Cor de fundo da barra */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0; /* Adiciona padding para altura da barra */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f68395; /* Efeito hover */
+}
+
+/* Carrinho e Login */
+.cart-login {
+    display: flex;
+    align-items: center;
+}
+
+.cart-login .btn {
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: #f68395;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-login .btn:hover {
+    background-color: #333;
+}
+
+.cart {
+    position: relative;
+    margin-right: 15px;
+}
+
+#cart-icon {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-right: 5px; /* Diminui a margem à direita para aproximar o contador */
+}
+
+#cart-count {
+    background-color: #f68395;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -15px; /* Ajusta a posição horizontal para ficar mais próximo ao ícone */
+}
+
+/* Barra de pesquisa e ícones de contato */
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f68395;
+}
+
+.contact-cart a {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.contact-cart a:hover {
+    color: #007bff;
+}
+
+/* Adicione mais espaçamento entre os ícones se necessário */
+.contact-cart a:not(:last-child) {
+    margin-right: 15px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #333;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-right: 40px;
+}
+
+.pesquisa img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+/* Banner */
+
+.home .container .banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0 auto; /* Centraliza o banner */
+    padding: 0 20px; /* Adiciona espaço nas laterais */
+    max-width: 1920px; /* Define a largura máxima */
+    border-radius: 15px; /* Define o arredondamento das bordas */
+    overflow: hidden; /* Garante que o arredondamento afete a imagem */
+    transition: box-shadow 0.3s;
+}
+
+.home .container .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Aplica o arredondamento às bordas da imagem */
+}
+
+.home .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adiciona sombra ao texto para melhor legibilidade */
+}
+
+/* Estilo para a imagem do banner */
+.home .container img {
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves para transformações */
+}
+
+/* Efeito de hover para a imagem do banner */
+.home .container img:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente a imagem */
+}
+
+
+/* Seções */
+section {
+    padding: 40px 20px;
+}
+
+/* Produtos */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #f0a1ba;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 12px;
+    transition: box-shadow 0.3s;
+}
+
+.product:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 450px; /* Altura fixa para uniformizar o tamanho das imagens */
+    object-fit: cover; /* Mantém a proporção e preenche o espaço disponível */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: #f68395;
+}
+
+.product p {
+    font-size: 25px; /* Aumenta o tamanho da fonte dos preços */
+    font-weight: bold; /* Adiciona peso à fonte para mais destaque */
+    color: #333;
+}
+
+/* Formulário de contato */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact label {
+    font-size: 14px;
+    color: #333;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f68395;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #333;
+}
+
+.footer {
+    background-color: #f68395; /* Cor de fundo do footer */
+    padding: 40px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center; /* Centraliza as colunas */
+    gap: 20px; /* Espaçamento entre as colunas */
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+    padding-bottom: 20px; /* Espaçamento interno abaixo da linha */
+    flex-wrap: wrap; /* Garante que as colunas se ajustem em telas menores */
+}
+
+.footer-nav, .footer-contact, .footer-social {
+    flex: 1;
+    max-width: 300px; /* Limita a largura das colunas */
+}
+
+.footer-nav h4, .footer-contact h4, .footer-social h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-nav ul, .footer-contact ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-nav ul li, .footer-contact ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a, .footer-contact ul li {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-nav ul li a:hover, .footer-contact ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+
+.footer-social .social-icons a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social .social-icons a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+}
+
+@media (max-width: 767px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center; /* Alinha as colunas no centro em telas menores */
+    }
+}
+
+.content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }

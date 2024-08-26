@@ -1,0 +1,227 @@
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7e4e3;
+    /* Cor de fundo geral */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #f68395;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    /* Alinha o conteúdo no centro */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Seção de Formulários */
+.forms-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente os formulários */
+    align-items: center;
+    padding: 40px 20px;
+    min-height: calc(100vh - 130px);
+    /* Ajusta a altura mínima para preencher a tela */
+    background-color: #fff;
+    /* Fundo branco para a área de formulários */
+    position: relative;
+}
+
+.form-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    /* Largura máxima dos formulários */
+    box-sizing: border-box;
+    position: absolute;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.login-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.signup-box {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+#signup:target~.forms-container .login-box {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+#signup:target~.forms-container .signup-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: #f68395;
+    /* Cor do título */
+    margin-bottom: 20px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f68395;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #ca015b;
+    /* Cor do botão ao passar o mouse */
+}
+
+/* Alternância entre login e cadastro */
+.switch-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.switch-form a {
+    color: #f68395;
+    /* Cor dos links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #f68395;
+    /* Cor de fundo do footer */
+    padding: 40px 0;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    /* Centraliza as colunas */
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+    border-bottom: 1px solid #ddd;
+    /* Linha separadora */
+    padding-bottom: 20px;
+    /* Espaçamento interno abaixo da linha */
+    flex-wrap: wrap;
+    /* Garante que as colunas se ajustem em telas menores */
+}
+
+.footer-nav,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    max-width: 300px;
+    /* Limita a largura das colunas */
+}
+
+.footer-nav h4,
+.footer-contact h4,
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-nav ul,
+.footer-contact ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-nav ul li,
+.footer-contact ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a,
+.footer-contact ul li {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-nav ul li a:hover,
+.footer-contact ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os ícones */
+    gap: 10px;
+    /* Espaçamento entre os ícones */
+}
+
+.footer-social .social-icons a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social .social-icons a:hover {
+    color: #007bff;
+    /* Cor ao passar o mouse */
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+}
+
+@media (max-width: 767px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        /* Alinha as colunas no centro em telas menores */
+    }
+}
